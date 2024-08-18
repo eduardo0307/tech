@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #eaf2f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #003366; /* Azul escuro */
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #66b3ff; /* Azul claro */
+}
+
+.hero-section {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(to right, #003366, #004080); /* Gradiente azul */
+}
+
+.hero-section .hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-section .hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn {
+    background-color: #66b3ff; /* Azul claro */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #3399ff; /* Azul médio */
+}
+
+.services-section {
+    background-color: #004080; /* Azul escuro */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #f0f8ff; /* Azul muito claro */
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #003366; /* Azul escuro */
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.about-section, .contact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-section h2, .contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #003366; /* Azul escuro */
+}
+
+.about-section p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+.contact-section form button {
+    background-color: #66b3ff; /* Azul claro */
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section form button:hover {
+    background-color: #3399ff; /* Azul médio */
+}
+
+.login-section, .register-section, .dashboard-section {
+    padding: 60px 20px;
+    background-color: #f0f8ff; /* Azul muito claro */
+    text-align: center;
+}
+
+.login-section form, .register-section form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-section form input, .register-section form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+.login-section form button, .register-section form button {
+    background-color: #66b3ff; /* Azul claro */
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-section form button:hover, .register-section form button:hover {
+    background-color: #3399ff; /* Azul médio */
+}
+
+.dashboard-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#resourceList {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#resourceList div {
+    background-color: #f0f8ff; /* Azul muito claro */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#addResourceBtn {
+    margin-top: 20px;
+    background-color: #2ecc71;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addResourceBtn:hover {
+    background-color: #27ae60;
+}
+
+#about {
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+footer {
+    background-color: #003366; /* Azul escuro */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.btn-cadastrar {
+    align-items: center;
+    background-color: #66b3ff; /* Azul claro */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cadastrar:hover {
+    background-color: #3399ff; /* Azul médio */
+}
+
+.toggle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 80%;
+    background: #000;
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+    background: #333;
+    border: 2px solid #191919;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    transition: .5s ease;
+}
+
+.input-check:checked~.toggle::after {
+    top: 65px;
+}
+
+.input-check {
+    position: absolute;
+    right: -70px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.toggle .text {
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 1em;
+    z-index: 1;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.toggle .text.off {
+    opacity: 1;
+}
+
+.input-check:checked~.toggle .text.off {
+    top: 76px;
+    opacity: 0;
+}
+
+.toggle .text.on {
+    opacity: 0;
+}
+
+.input-check:checked~.toggle .text.on {
+    top: 76px;
+    opacity: 1;
+    color: #00f7ff;
+    text-shadow:
+        0 0 15px #00f7ff,
+        0 0 30px #00f7ff,
+        0 0 45px #00f7ff,
+        0 0 60px #00f7ff;
+}

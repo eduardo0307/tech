@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dashboard - AgroConexão</title>
+    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<style>
+body {
+    font-family: 'Kalnia Glaze', sans-serif;
+    background-color: #f0f8ff; /* Azul muito claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003366; /* Azul escuro */
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #66b3ff; /* Azul claro */
+}
+
+.dashboard-section {
+    padding: 60px 20px;
+    background-color: #e0f7fa; /* Azul suave */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.dashboard-section h2 {
+    color: #007bb5; /* Azul mais forte */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.dashboard-section p {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+#resourcelist {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#resource-list div {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px ;
+    border-radius: 10px;
+    width: 200px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-add-resource {
+    margin-top: 20px;
+    background-color: #007bb5; /* Azul mais forte */
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-resource:hover {
+    background-color: #005f8b; /* Azul mais escuro */
+}
+
+footer {
+    background-color: #003366; /* Azul escuro */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bb5; /* Azul mais forte */
+}      
+</style>
+           
+<body>
+
+    <header>
+        <div class="logo">EcoShare</div>
+        <nav>
+            <ul> 
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Avalicao.html">Avaliação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="dashboard" class="dashboard-section">
+        <h2>Bem-vindo(a), <span id="userName"></span>!</h2>
+        <p>Gerencie seus recursos compartilhados abaixo:</p>
+        <div id="resourceList" class="resource-list"></div>
+        <button id="addResourceBtn" class="btn-add-resource">Adicionar Recurso</button>
+    </section>
+
+    <section id="dashboard" class="dashboard-section">
+        <h2>Bem-vindo, <span id="userName"></span>!</h2>
+        <p>Gerencie seus recursos compartilhados abaixo:</p>
+        <div id="resourceList"></div>
+        <button id="addResourceBtn">Adicionar Recurso</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 EcoShare: Do Campo à Cidade. Todos os direitos reservados.</p>
+        
+    </footer>
+
+    <script src="scripts.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                    console.log('ServiceWorker registrado com sucesso: ', registration);
+                }).catch(error => {
+                    console.log('Falha no registro do ServiceWorker: ', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
